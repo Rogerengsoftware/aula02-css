@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        fieldset {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulário para coleta de dados do usuário -->
+    <form action="" method="post">
+        <!-- Campo para o nome do usuário -->
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" size="50" maxlength="50">
+
+        <!-- Campo para a senha do usuário -->
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" size="8" maxlength="8">
+
+        <!-- Campo para selecionar linguagens de interesse -->
+        <fieldset>
+            <legend>Linguagem que tem interesse</legend>
+            <input type="checkbox" name="Linguagem[]" value="c++" id="c++">
+            <label for="c++">C++</label>
+            <input type="checkbox" name="Linguagem[]" value="Java" id="Java">
+            <label for="Java">Java</label>
+            <input type="checkbox" name="Linguagem[]" value="Python" id="Python">
+            <label for="Python">Python</label>
+        </fieldset>
+
+        <!-- Campo para selecionar a linguagem que irá cursar agora -->
+        <label for="curso">Linguagem que irá cursar agora</label>
+        <input type="radio" name="curso" value="c++" id="curso-c++">
+        <label for="curso-c++">C++</label>
+        <input type="radio" name="curso" value="Java" id="curso-Java">
+        <label for="curso-Java">Java</label>
+        <input type="radio" name="curso" value="Python" id="curso-Python">
+        <label for="curso-Python">Python</label>
+
+        <!-- Campo para selecionar a escola -->
+        <label for="escola">Escolha a escola</label>
+        <select name="escola" id="escola">
+            <option value="c++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+        </select>
+
+        <!-- Botão de envio do formulário -->
+        <input type="submit" id="submit" value="Enviar">
+    </form>
+</body>
+</html>
